@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="#f8fbfa" name="theme-color"/>
+    <meta content="Explore Neil Bryan C. Paguigan’s desktop-style portfolio: IT graduate, computer technician, and developing programmer based in Bulacan, Philippines." name="description"/>
+    <title>Neil Bryan C. Paguigan | Portfolio</title>
+    <link href="style.css" rel="stylesheet"/>
+    <script defer="" src="script.js"></script>
+    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+  </head>
+  <body>
+    <!-- SVG ICON DEFINITIONS — navigation icon shapes -->
+    <svg aria-hidden="true" class="icon-sprite" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <symbol fill="none" id="icon-about" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewbox="0 0 24 24">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path d="M4 21v-2a8 8 0 0 1 16 0v2"></path>
+        </symbol>
+        <symbol fill="none" id="icon-projects" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewbox="0 0 24 24">
+          <rect height="15" rx="2" width="18" x="3" y="5"></rect>
+          <path d="M3 10h18M8 3v4"></path>
+        </symbol>
+        <symbol fill="none" id="icon-skills" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewbox="0 0 24 24">
+          <path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-11-2 14"></path>
+        </symbol>
+        <symbol fill="none" id="icon-experience" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewbox="0 0 24 24">
+          <rect height="14" rx="2" width="18" x="3" y="7"></rect>
+          <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18M10 13v2h4v-2"></path>
+        </symbol>
+        <symbol fill="none" id="icon-contact" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewbox="0 0 24 24">
+          <rect height="14" rx="2" width="18" x="3" y="5"></rect>
+          <path d="m3 7 9 7 9-7"></path>
+        </symbol>
+        <symbol fill="none" id="icon-education" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewbox="0 0 24 24">
+          <path d="m2 9 10-5 10 5-10 5L2 9Z"></path>
+          <path d="M6 11v5c3.5 3 8.5 3 12 0v-5M22 9v7"></path>
+        </symbol>
+      </defs>
+    </svg>
+    <div aria-hidden="true" class="wallpaper">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+      <div class="grain"></div>
+    </div>
+    <div class="desktop" id="desktop">
+      <!-- TOP BAR — logo, theme toggle and clock -->
+      <header class="topbar">
+        <div class="brand">
+          <span aria-hidden="true" class="brand-mark">NB<span>.</span></span>
+          <span>neilbryan<span class="muted">.portfolio</span></span>
+        </div>
+        <div class="topbar-right">
+          <span class="topbar-tip">INTERACTIVE PORTFOLIO / 2026</span>
+          <button aria-label="Switch to dark mode" aria-pressed="false" class="theme-toggle" id="themeToggle" title="Switch theme" type="button"><span aria-hidden="true" class="theme-toggle-icon" id="themeGlyph">☾</span><span class="theme-toggle-label" id="themeLabel">Dark mode</span></button>
+          <span class="topbar-divider"></span>
+          <span id="topClock">--:--</span>
+        </div>
+      </header>
+      <main class="workspace">
+        <!-- DESKTOP SHORTCUTS — data-open targets a window ID -->
+        <div aria-label="Desktop shortcuts" class="desktop-icons">
+          <button class="shortcut" data-open="about"><span class="shortcut-icon icon-about"><svg aria-hidden="true" class="ui-icon"><use href="#icon-about"></use></svg></span><span>About Me</span></button>
+          <button class="shortcut" data-open="projects"><span class="shortcut-icon icon-projects"><svg aria-hidden="true" class="ui-icon"><use href="#icon-projects"></use></svg></span><span>Projects</span></button>
+          <button class="shortcut" data-open="skills"><span class="shortcut-icon icon-skills"><svg aria-hidden="true" class="ui-icon"><use href="#icon-skills"></use></svg></span><span>Skills</span></button>
+          <button class="shortcut" data-open="experience"><span class="shortcut-icon icon-experience"><svg aria-hidden="true" class="ui-icon"><use href="#icon-experience"></use></svg></span><span>Experience</span></button>
+          <button class="shortcut" data-open="contact"><span class="shortcut-icon icon-contact"><svg aria-hidden="true" class="ui-icon"><use href="#icon-contact"></use></svg></span><span>Contact</span></button>
+          <button class="shortcut" data-open="education"><span class="shortcut-icon icon-education"><svg aria-hidden="true" class="ui-icon"><use href="#icon-education"></use></svg></span><span>Education</span></button>
+        </div>
+        <!-- HERO / HOME PAGE — edit your name, headline and introduction here -->
+        <section aria-label="Welcome" class="hero">
+          <div class="hello-pill"><span class="status-dot"></span> OPEN TO OPPORTUNITIES</div>
+          <div aria-hidden="true" class="hero-symbol"><span aria-hidden="true" class="hero-emblem">NB<span>.</span></span></div>
+          <p class="hero-kicker">INFORMATION TECHNOLOGY / DEVELOPMENT &amp; SUPPORT</p>
+          <p class="hero-intro">Hi, I'm</p>
+          <h1 class="hero-name">Neil Bryan C. Paguigan<span class="hero-period">.</span></h1>
+          <p class="hero-description">IT Graduate <span class="role-divider">/</span> Computer Technician <span class="role-divider">/</span> Aspiring Developer</p>
+          <p class="hero-subtitle">I combine hands-on computer hardware and troubleshooting experience with a growing foundation in programming and web development.</p>
+          <button class="hero-action" data-open="experience">Explore my experience <span aria-hidden="true">↗</span></button>
+        </section>
+        <div class="window-layer" id="windowLayer">
+          <!-- ABOUT ME  -->
+          <section aria-label="About Me" aria-modal="false" class="app-window" data-icon="A" data-title="About Me" hidden="" id="window-about" role="dialog">
+            <div class="window-titlebar">
+              <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-about"></use></svg>about / profile</div>
+              <div class="window-controls">
+                <button aria-label="Minimize About Me" data-minimize="">−</button>
+                <button aria-label="Close About Me" data-close="">×</button>
+              </div>
+            </div>
+            <div class="window-body about-layout">
+              <div class="avatar-card">
+                <div class="avatar-art avatar-photo-wrap"><img alt="Portrait of Neil Bryan C. Paguigan" height="400" loading="lazy" src="assets/profile.jpg" width="400"/></div>
+                <div class="avatar-caption">NEIL BRYAN C. PAGUIGAN</div>
+              </div>
+              <div class="about-copy">
+                <p class="eyebrow">01 / ABOUT ME</p>
+                <h2>Hi, I'm <span class="highlight">Neil Bryan.</span></h2>
+                <p>I'm a Bachelor of Science in Information Technology graduate from STI College San Jose Del Monte, with practical experience in computer diagnostics, PC assembly, operating system installation, and software troubleshooting.</p>
+                <p>My background also includes an on-the-job training role as a video editor at Hooli Software. I'm continuing to build my programming skills and looking for opportunities to apply both my technical experience and creativity.</p>
+                <div class="tags">
+                  <span>BS Information Technology</span>
+                  <span>PC Support</span>
+                  <span>Web Fundamentals</span>
+                  <span>Video Editing</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- PROJECTS -->
+          <section aria-label="Projects" aria-modal="false" class="app-window" data-icon="P" data-title="Projects" hidden="" id="window-projects" role="dialog">
+            <div class="window-titlebar">
+              <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-projects"></use></svg>projects / selected work</div>
+              <div class="window-controls">
+                <button aria-label="Minimize Projects" data-minimize="">−</button>
+                <button aria-label="Close Projects" data-close="">×</button>
+              </div>
+            </div>
+            <div class="window-body">
+              <p class="eyebrow">02 / SELECTED WORK</p>
+              <div class="section-heading">
+                <h2>Work &amp; <span class="highlight">projects.</span></h2>
+                <span class="tiny-caption">RESUME-BASED</span>
+              </div>
+              <div class="project-grid">
+                <!-- PROJECT CARD -->
+                <article class="project-card">
+                  <div class="project-art art-one"><span aria-hidden="true">⌘</span><small>WEB PORTFOLIO</small></div>
+                  <div class="project-content">
+                    <div class="project-index">01 — PERSONAL WEBSITE</div>
+                    <h3>Portfolio OS</h3>
+                    <p>This website: a desktop-inspired, responsive portfolio with shortcut navigation, interactive windows, and light/dark themes.</p>
+                    <div class="project-footer">
+                      <span>HTML · CSS · JAVASCRIPT</span>
+                      <span class="project-current">YOU'RE HERE</span>
+                    </div>
+                  </div>
+                </article>
+                <!-- PROJECT CARD -->
+                <article class="project-card">
+                  <div class="project-art art-two"><span aria-hidden="true">▶</span><small>HOOLI SOFTWARE</small></div>
+                  <div class="project-content">
+                    <div class="project-index">02 — OJT / VIDEO</div>
+                    <h3>Video Editing</h3>
+                    <p>Edited short-form Reels content and lyric videos during my March–June 2023 internship at Hooli Software.</p>
+                    <div class="project-footer">
+                      <span>REELS · LYRIC VIDEOS</span>
+                      <span class="project-current">OJT WORK</span>
+                    </div>
+                  </div>
+                </article>
+                <!-- PROJECT CARD -->
+                <article class="project-card">
+                  <div class="project-art art-three"><span aria-hidden="true">◌</span><small>HOOLI SOFTWARE</small></div>
+                  <div class="project-content">
+                    <div class="project-index">03 — OJT / WEB ASSETS</div>
+                    <h3>Website Preloaders</h3>
+                    <p>Worked on preloader assets for websites as part of my video-editing internship.</p>
+                    <div class="project-footer">
+                      <span>DIGITAL ASSETS</span>
+                      <span class="project-current">OJT WORK</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <p class="editor-note">Portfolio samples and external case-study links can be added when they are available. No placeholder projects or fake links.</p>
+            </div>
+          </section>
+          <!-- SKILLS -->
+          <section aria-label="Skills" aria-modal="false" class="app-window" data-icon="S" data-title="Skills" hidden="" id="window-skills" role="dialog">
+            <div class="window-titlebar">
+              <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-skills"></use></svg>skills / capabilities</div>
+              <div class="window-controls">
+                <button aria-label="Minimize Skills" data-minimize="">−</button>
+                <button aria-label="Close Skills" data-close="">×</button>
+              </div>
+            </div>
+            <div class="window-body">
+              <p class="eyebrow">03 / TECHNICAL SKILLS</p>
+              <h2>What I <span class="highlight">work with.</span></h2>
+              <p class="section-lead">A foundation in programming and practical experience with computers, software, and creative tools.</p>
+              <!-- SKILL CATEGORY -->
+              <div class="skill-group">
+                <h3><span>01</span> Programming fundamentals</h3>
+                <div class="skill-pills">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>C# (basic)</span>
+                  <span>Python (basic)</span>
+                </div>
+              </div>
+              <!-- SKILL CATEGORY -->
+              <div class="skill-group">
+                <h3><span>02</span> Computer hardware &amp; support</h3>
+                <div class="skill-pills">
+                  <span>PC Building</span>
+                  <span>System Diagnostics</span>
+                  <span>OS Installation</span>
+                  <span>Software Installation</span>
+                  <span>Basic Troubleshooting</span>
+                  <span>Computer Literacy</span>
+                </div>
+              </div>
+              <!-- SKILL CATEGORY -->
+              <div class="skill-group">
+                <h3><span>03</span> Creative &amp; workplace skills</h3>
+                <div class="skill-pills">
+                  <span>Reels Video Editing</span>
+                  <span>Lyric Videos</span>
+                  <span>Photo Editing</span>
+                  <span>Microsoft Office (basic)</span>
+                  <span>Written Communication</span>
+                  <span>Verbal Communication</span>
+                </div>
+              </div>
+              <p class="editor-note">Programming languages are listed as foundational skills, consistent with my résumé.</p>
+            </div>
+          </section>
+          <!-- EXPERIENCE -->
+          <section aria-label="Experience" aria-modal="false" class="app-window" data-icon="E" data-title="Experience" hidden="" id="window-experience" role="dialog">
+            <div class="window-titlebar">
+              <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-experience"></use></svg>experience / timeline</div>
+              <div class="window-controls">
+                <button aria-label="Minimize Experience" data-minimize="">−</button>
+                <button aria-label="Close Experience" data-close="">×</button>
+              </div>
+            </div>
+            <div class="window-body">
+              <p class="eyebrow">04 / PROFESSIONAL EXPERIENCE</p>
+              <h2>Where I've <span class="highlight">worked.</span></h2>
+              <!-- EXPERIENCE TIMELINE -->
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-date">NOV 2024 — PRESENT</span>
+                  <h3>Computer Technician</h3>
+                  <p class="timeline-place">PC Bulacan Computer Center · San Jose del Monte, Bulacan</p>
+                  <ul class="experience-list">
+                    <li>Diagnose desktop computer hardware issues.</li>
+                    <li>Assemble and build system units.</li>
+                    <li>Install operating systems and software, and perform basic troubleshooting.</li>
+                  </ul>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-date">MAR 2023 — JUN 2023</span>
+                  <h3>Video Editor (OJT)</h3>
+                  <p class="timeline-place">Hooli Software · Internship</p>
+                  <ul class="experience-list">
+                    <li>Edited Reels and other short-form video content.</li>
+                    <li>Created or edited lyric videos.</li>
+                    <li>Worked on preloaders for websites.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- CONTACT -->
+          <section aria-label="Contact" aria-modal="false" class="app-window" data-icon="C" data-title="Contact" hidden="" id="window-contact" role="dialog">
+            <div class="window-titlebar">
+              <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-contact"></use></svg>contact / connect</div>
+              <div class="window-controls">
+                <button aria-label="Minimize Contact" data-minimize="">−</button>
+                <button aria-label="Close Contact" data-close="">×</button>
+              </div>
+            </div>
+            <div class="window-body contact-body">
+              <div class="contact-art"><svg aria-hidden="true" class="contact-icon"><use href="#icon-contact"></use></svg></div>
+              <p class="eyebrow">05 / GET IN TOUCH</p>
+              <h2>Let's <span class="highlight">connect.</span></h2>
+              <p>I'm based in San Jose del Monte, Bulacan, Philippines, and open to opportunities in software development and IT support.</p>
+              <a class="contact-primary" href="mailto:neilbryancpaguigan@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+              <!-- CONTACT DETAILS — these appear publicly when you publish the site -->
+              <div class="contact-details">
+                <a href="mailto:neilbryancpaguigan@gmail.com">neilbryancpaguigan@gmail.com</a>
+                <a href="tel:+639936010426">+63 993-601-0426</a>
+                <span>San Jose del Monte, Bulacan, PH</span>
+              </div>
+            </div>
+          </section>
+          <!-- EDUCATION -->
+          <section aria-label="Education" aria-modal="false" class="app-window" data-icon="ED" data-title="Education" hidden="" id="window-education" role="dialog">
+            <div class="window-titlebar">
+              <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-education"></use></svg> education / qualifications</div>
+              <div class="window-controls">
+                <button aria-label="Minimize Education" data-minimize="">−</button>
+                <button aria-label="Close Education" data-close="">×</button>
+              </div>
+            </div>
+            <div class="window-body">
+              <p class="eyebrow">06 / EDUCATION</p>
+              <h2>My academic <span class="highlight">background.</span></h2>
+              <div class="timeline education-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-date">COLLEGE · GRADUATE</span>
+                  <h3>Bachelor of Science in Information Technology</h3>
+                  <p class="timeline-place">STI College San Jose Del Monte</p>
+                  <p>Dean's Lister (2022)</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-date">SENIOR HIGH SCHOOL</span>
+                  <h3>Senior High School</h3>
+                  <p class="timeline-place">Bulacan Standard Academy</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-date">EARLIER EDUCATION</span>
+                  <h3>Junior High School</h3>
+                  <p class="timeline-place">Bulacan Standard Academy · Grades 8–10</p>
+                  <p class="timeline-place">College of Saint Adela · Grade 7 (as listed on résumé)</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- TASKBAR -->
+      <footer class="taskbar">
+        <button aria-expanded="false" aria-label="Open shortcut menu" class="start-button" id="startButton"><span aria-hidden="true" class="start-mark">NB<span>.</span></span><span>Start</span></button>
+        <div class="task-separator"></div>
+        <div aria-label="Open apps" class="task-items" id="taskItems"></div>
+        <div class="taskbar-right">
+          <span class="taskbar-message">OPEN TO OPPORTUNITIES</span>
+          <span class="task-separator"></span>
+          <div class="tray-clock"><span id="taskClock">--:--</span><span id="taskDate">---</span></div>
+        </div>
+      </footer>
+      <!-- START MENU -->
+      <div class="start-menu" hidden="" id="startMenu">
+        <div class="start-heading">
+          <span aria-hidden="true" class="start-heading-mark">NB<span>.</span></span>
+          <span>Navigation</span>
+        </div>
+        <div class="start-grid">
+          <button data-open="about"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-about"></use></svg><span>About Me</span></button>
+          <button data-open="projects"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-projects"></use></svg><span>Projects</span></button>
+          <button data-open="skills"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-skills"></use></svg><span>Skills</span></button>
+          <button data-open="experience"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-experience"></use></svg><span>Experience</span></button>
+          <button data-open="contact"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-contact"></use></svg><span>Contact</span></button>
+          <button data-open="education"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-education"></use></svg><span>Education</span></button>
+        </div>
+        <div class="start-footer">PORTFOLIO OS <span>VERSION 2.0</span></div>
+      </div>
+    </div>
+  </body>
+</html>
