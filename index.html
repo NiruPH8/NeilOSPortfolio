@@ -194,21 +194,34 @@
                   </div>
                 </article>
 
-                <!-- PROJECT CARD — replace the title, description, and tech stack below -->
-                <article class="project-card">
-                  <div class="project-art art-two">
-                    <span aria-hidden="true">▶</span>
-                    <small>HOOLI SOFTWARE</small>
-                  </div>
-                  <div class="project-content">
-                    <div class="project-index">02 — OJT / VIDEO</div>
-                    <h3>Video Editing</h3>
-                    <p>Edited short-form Reels content and lyric videos during my March–June 2023 internship at Hooli Software.</p>
-                    <div class="project-footer">
-                      <span>REELS · LYRIC VIDEOS</span>
-                      <span class="project-current">OJT WORK</span>
+                <!-- PROJECT 02 — VIDEO EDITING: Opens an internal Portfolio OS window -->
+                <article class="project-card video-project-card">
+                  <a
+                    class="video-project-card-link"
+                    href="#window-video-editing"
+                    data-open="video-editing"
+                    aria-label="Open Video Editing samples inside Portfolio OS"
+                  >
+                    <div class="project-art art-two">
+                      <span aria-hidden="true">▶</span>
+                      <small>HOOLI SOFTWARE</small>
                     </div>
-                  </div>
+
+                    <div class="project-content">
+                      <div class="project-index">02 — OJT / VIDEO</div>
+                      <h3>Video Editing</h3>
+
+                      <p>
+                        Edited short-form Reels content and lyric videos during
+                        my March–June 2023 internship at Hooli Software.
+                      </p>
+
+                      <div class="project-footer">
+                        <span>REELS · LYRIC VIDEOS</span>
+                        <span class="video-project-action">VIEW SAMPLES ↗</span>
+                      </div>
+                    </div>
+                  </a>
                 </article>
 
                 <!-- PROJECT CARD — replace the title, description, and tech stack below -->
@@ -233,6 +246,104 @@
                 <!-- PROJECT 04 — NEON OVERTAKE: Click to open the game details in a new tab -->
               </div>
               <p class="editor-note">Select Neon Overtake to view gameplay screenshots, details, and its Windows installer.</p>
+            </div>
+          </section>
+
+          <!-- VIDEO EDITING — Internal Portfolio OS window with two YouTube samples -->
+          <section
+            id="window-video-editing"
+            class="app-window video-samples-window"
+            role="dialog"
+            aria-label="Video Editing sample videos"
+            aria-modal="false"
+            data-title="Video Editing"
+            data-icon="▶"
+            hidden
+          >
+            <div class="window-titlebar">
+              <div class="window-heading">
+                <svg aria-hidden="true" class="heading-icon">
+                  <use href="#icon-projects"></use>
+                </svg>
+                video editing / youtube samples
+              </div>
+
+              <div class="window-controls">
+                <button aria-label="Minimize Video Editing" data-minimize>−</button>
+                <button aria-label="Close Video Editing" data-close>×</button>
+              </div>
+            </div>
+
+            <div class="window-body video-samples-body">
+              <p class="eyebrow">02 / VIDEO EDITING</p>
+              <h2>Here are my <span class="highlight">sample YouTube videos.</span></h2>
+
+              <p class="video-samples-intro">
+                Two video-editing samples: one standard YouTube video and one YouTube Short.
+                You can watch them here without leaving Portfolio OS.
+              </p>
+
+              <div class="video-samples-grid">
+                <!-- SAMPLE 01 — Regular YouTube video -->
+                <article class="video-sample-card">
+                  <div class="video-sample-heading">
+                    <span>01 / YT VIDEO</span>
+                    <h3>YT Video</h3>
+                  </div>
+
+                  <div class="video-player video-player-wide">
+                    <iframe
+                      title="Video editing sample — YouTube video"
+                      data-video-src="https://www.youtube-nocookie.com/embed/UKLAP0LVAnY"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+
+                  <a
+                    class="video-sample-external"
+                    href="https://www.youtube.com/watch?v=UKLAP0LVAnY"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View original on YouTube ↗
+                  </a>
+                </article>
+
+                <!-- SAMPLE 02 — YouTube Short -->
+                <article class="video-sample-card">
+                  <div class="video-sample-heading">
+                    <span>02 / YT SHORTS</span>
+                    <h3>YT Shorts</h3>
+                  </div>
+
+                  <div class="video-player video-player-shorts">
+                    <iframe
+                      title="Video editing sample — YouTube Short"
+                      data-video-src="https://www.youtube-nocookie.com/embed/x6o4ny98lG0"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+
+                  <a
+                    class="video-sample-external"
+                    href="https://www.youtube.com/shorts/x6o4ny98lG0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View original on YouTube ↗
+                  </a>
+                </article>
+              </div>
+
+              <p class="video-samples-footnote">
+                If an embedded video is unavailable, use its YouTube link above.
+              </p>
             </div>
           </section>
 

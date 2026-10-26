@@ -52,6 +52,20 @@ function focusWindow(win) {
   });
 }
 
+// Load YouTube players only while the internal Video Editing window is visible.
+// Removing the src also stops playback when the window is minimized or closed.
+function setVideoPlayersActive(win, active) {
+  if (win.id !== 'window-video-editing') return;
+
+  win.querySelectorAll('iframe[data-video-src]').forEach(iframe => {
+    if (active) {
+      iframe.setAttribute('src', iframe.dataset.videoSrc);
+    } else {
+      iframe.removeAttribute('src');
+    }
+  });
+}
+
 function renderTasks() {
   taskItems.replaceChildren();
 
@@ -74,9 +88,11 @@ function renderTasks() {
     btn.addEventListener('click', () => {
       if (win.hidden) {
         win.hidden = false;
+        setVideoPlayersActive(win, true);
         focusWindow(win);
       } else if (Number(win.style.zIndex) === topZ) {
         win.hidden = true;
+        setVideoPlayersActive(win, false);
       } else {
         focusWindow(win);
       }
@@ -93,6 +109,7 @@ function openWindow(id) {
   if (!win) return;
 
   win.hidden = false;
+  setVideoPlayersActive(win, true);
   opened.add(id);
   focusWindow(win);
 
@@ -103,19 +120,25 @@ function openWindow(id) {
 }
 
 function closeWindow(win) {
+  setVideoPlayersActive(win, false);
   win.hidden = true;
   opened.delete(win.id.slice(7));
   renderTasks();
 }
 
 function minimizeWindow(win) {
+  setVideoPlayersActive(win, false);
   win.hidden = true;
   renderTasks();
 }
 
 // All desktop shortcuts, Start menu shortcuts, and hero buttons use data-open.
 document.querySelectorAll('[data-open]').forEach(button => {
-  button.addEventListener('click', () => openWindow(button.dataset.open));
+  button.addEventListener('click', event => {
+    // Internal links should open an OS window, not jump in the browser.
+    if (button.tagName === 'A') event.preventDefault();
+    openWindow(button.dataset.open);
+  });
 });
 
 
