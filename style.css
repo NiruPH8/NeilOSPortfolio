@@ -3615,6 +3615,58 @@ html[data-theme="light"] .video-sample-external:hover {
 
 
 /* ==========================================================================
+   MOBILE PROJECT CARDS — clickable links must fill the entire card
+
+   The normal project card uses two grid columns on phones, but the Video
+   Editing and Neon Overtake cards wrap their art and content in an <a>.
+   Without this rule that single <a> becomes only one grid item, leaving a
+   blank column and stretching the artwork vertically on iOS Safari.
+   ========================================================================== */
+
+@media (max-width: 700px) {
+  .project-card.video-project-card,
+  .project-card.neon-project-card {
+    display: block;
+  }
+
+  .video-project-card-link,
+  .neon-project-card-link {
+    display: grid;
+    grid-template-columns: minmax(100px, 36%) minmax(0, 1fr);
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    align-items: stretch;
+  }
+
+  .video-project-card-link > .project-art,
+  .neon-project-card-link > .project-art {
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-project-card-link > .project-content,
+  .neon-project-card-link > .project-content {
+    min-width: 0;
+  }
+}
+
+/* Match the normal project cards' one-column layout on small iPhones. */
+@media (max-width: 390px) {
+  .video-project-card-link,
+  .neon-project-card-link {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .video-project-card-link > .project-art,
+  .neon-project-card-link > .project-art {
+    height: auto;
+  }
+}
+
+
+/* ==========================================================================
    iOS / TOUCH — reliable window close and minimize controls
    ========================================================================== */
 
