@@ -1,5 +1,22 @@
+/*
+ * PORTFOLIO STYLES — CODE NAVIGATION
+ *
+ * Use Ctrl+F for: HERO, PROJECTS, EXPERIENCE, CONTACT, or RESPONSIVE.
+ * Light mode is the default; the dark theme is available through the toggle.
+ * Many later rules refine earlier ones. Keep the order to preserve the design.
+ * To change colors, look for LIGHT / DARK THEME and PASTEL LIGHT THEME.
+ */
+
+
+/* ==========================================================================
+   FONTS — loaded from Google Fonts
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
+
+/* ==========================================================================
+   BASE / DESIGN TOKENS — main dark-mode variables and reset
+   ========================================================================== */
 :root {
   color-scheme: dark;
   --bg: #08090c;
@@ -41,7 +58,7 @@ a {
 
 
 /* ==========================================================================
-   BACKGROUNDS
+   BACKGROUND — wallpaper and soft ambient effects
    ========================================================================== */
 .wallpaper {
   position: fixed;
@@ -87,7 +104,7 @@ a {
 
 
 /* ==========================================================================
-   HEADER
+   HEADER — branding and theme controls
    ========================================================================== */
 .topbar {
   height: 60px;
@@ -1191,6 +1208,17 @@ a {
 /* ==========================================================================
    LIGHT / DARK THEME SWITCH — theme-specific styles
    ========================================================================== */
+/*
+ * ========================================================================
+ * THEME SWITCHER: Midnight desktop + professional pastel desktop.
+ * The pastel palette is the default via <html data-theme="light">.
+ * Add/edit colors here without changing the window or taskbar logic.
+ * ========================================================================
+ */
+
+/*
+ * The theme control is available in the top bar on desktop and mobile.
+ */
 
 .theme-toggle {
   display: inline-flex;
@@ -1227,6 +1255,10 @@ a {
 .topbar-right {
   gap: 15px;
 }
+
+/*
+ * A little polish for switching: no layout or dragging transitions.
+ */
 
 body,
 .wallpaper,
@@ -3270,5 +3302,348 @@ html[data-theme="light"] .contact-details a:hover {
 @media (max-width: 390px) {
   .hero h1.hero-name {
     font-size: clamp(28px, 8.4vw, 34px);
+  }
+}
+
+
+/* ==========================================================================
+   PROJECT CARD MONOGRAM — matches the NB. portfolio identity
+   ========================================================================== */
+.project-art > .project-logo {
+  display: inline-block;
+  padding-right: 0.1em;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  color: #f4f4f4;
+}
+
+.project-art .project-logo-dot {
+  color: #a9e4eb;
+}
+
+html[data-theme="light"] .project-art > .project-logo {
+  color: #2d434c;
+}
+
+html[data-theme="light"] .project-art .project-logo-dot {
+  color: #b67996;
+}
+
+@media (max-width: 600px) {
+  .project-art > .project-logo {
+    font-size: clamp(34px, 8vw, 50px);
+  }
+}
+
+
+/* ==========================================================================
+   NEON OVERTAKE — clickable project card
+   ========================================================================== */
+.neon-project-card {
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+.neon-project-card:hover,
+.neon-project-card:focus-within {
+  transform: translateY(-4px);
+  border-color: #36dce8;
+  box-shadow: 0 13px 38px rgba(32,214,229,.15);
+}
+
+.neon-project-card-link {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.neon-project-art {
+  overflow: hidden;
+  padding: 10px;
+  background: #02070d !important;
+}
+
+.neon-project-art > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  opacity: 1;
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+.neon-project-card:hover .neon-project-art > img,
+.neon-project-card:focus-within .neon-project-art > img {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+.neon-project-art small {
+  z-index: 1;
+  padding: 4px 7px;
+  color: #d2ffff !important;
+  background: rgba(3,18,33,.86);
+  border: 1px solid rgba(60,245,242,.30);
+  border-radius: 4px;
+}
+
+.neon-project-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  border: 1px solid rgba(48,207,213,.55);
+  border-radius: 6px;
+  color: #65f4ee;
+  white-space: nowrap;
+}
+
+html[data-theme="light"] .neon-project-card:hover,
+html[data-theme="light"] .neon-project-card:focus-within {
+  border-color: #74ccd2;
+  box-shadow: 0 14px 34px rgba(85,175,188,.2);
+}
+
+html[data-theme="light"] .neon-project-action {
+  background: #dafafa;
+  color: #17646a;
+  border-color: #8ad8dd;
+}
+
+
+/* ==========================================================================
+   VIDEO EDITING PROJECT — click anywhere to open the Portfolio OS window
+   ========================================================================== */
+
+.video-project-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.video-project-card:hover,
+.video-project-card:focus-within {
+  transform: translateY(-3px);
+  border-color: #78d9e3;
+}
+
+.video-project-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.video-project-card-link:focus-visible {
+  outline: 3px solid #75e7f1;
+  outline-offset: -4px;
+  border-radius: 10px;
+}
+
+.video-project-card-link .project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.video-project-card-link .project-footer {
+  margin-top: auto;
+}
+
+.video-project-action {
+  border: 1px solid #91dfe6;
+  border-radius: 6px;
+  padding: 6px 8px;
+  color: #a9f2f3;
+  white-space: nowrap;
+}
+
+html[data-theme="light"] .video-project-action {
+  background: #d8f7f9;
+  color: #285861;
+  border-color: #bd8ba6;
+}
+
+/* ==========================================================================
+   VIDEO EDITING WINDOW — embedded YouTube video and Short
+   ========================================================================== */
+
+.video-samples-window {
+  width: min(920px, calc(100vw - 190px));
+  max-height: min(84vh, 840px);
+  top: 4%;
+}
+
+.video-samples-body {
+  padding: clamp(18px, 3vw, 34px);
+}
+
+.video-samples-body .video-samples-intro {
+  max-width: 650px;
+  margin: 0 0 22px;
+}
+
+.video-samples-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.video-sample-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #ffffff36;
+  background: #252830;
+}
+
+.video-sample-heading span {
+  font: 10px 'DM Mono', monospace;
+  color: #a7dce4;
+  letter-spacing: 1px;
+}
+
+.video-sample-heading h3 {
+  margin: 7px 0 0;
+  font-size: 17px;
+  color: #f0ecf2;
+}
+
+.video-player {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #09121e;
+  border: 1px solid #344456;
+}
+
+.video-player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-player-wide {
+  aspect-ratio: 16 / 9;
+}
+
+.video-player-shorts {
+  aspect-ratio: 9 / 16;
+  max-width: 236px;
+  margin: 0 auto;
+}
+
+.video-sample-external {
+  display: inline-block;
+  align-self: flex-start;
+  color: #a9f2f3;
+  border: 1px solid #6fcdd9;
+  padding: 9px 11px;
+  border-radius: 7px;
+  font: 11px 'DM Mono', monospace;
+  text-decoration: none;
+}
+
+.video-sample-external:hover {
+  background: #4bb9c624;
+}
+
+.video-samples-body .video-samples-footnote {
+  font-size: 11px;
+  margin-top: 17px;
+}
+
+html[data-theme="light"] .video-sample-card {
+  background: #f8ffff;
+  border-color: #dfbfd0;
+}
+
+html[data-theme="light"] .video-sample-heading h3 {
+  color: #283940;
+}
+
+html[data-theme="light"] .video-sample-heading span {
+  color: #8b5473;
+}
+
+html[data-theme="light"] .video-sample-external {
+  background: #d9f4f6;
+  color: #294750;
+  border-color: #c79aaf;
+}
+
+html[data-theme="light"] .video-sample-external:hover {
+  background: #bcf0f2;
+}
+
+@media (max-width: 1150px) {
+  .video-samples-window {
+    width: min(100%, 890px);
+    max-height: min(85dvh, 840px);
+  }
+}
+
+@media (max-width: 700px) {
+  .video-samples-window {
+    width: 100%;
+    max-height: none;
+  }
+
+  .video-samples-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-sample-card {
+    padding: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-project-card {
+    transition: none;
+  }
+}
+
+
+/* ==========================================================================
+   iOS / TOUCH — reliable window close and minimize controls
+   ========================================================================== */
+
+.window-controls {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.window-controls button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+  /* Minimum 44x44px touch targets recommended for iPhone/iPad. */
+  .window-controls button {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .window-heading {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }

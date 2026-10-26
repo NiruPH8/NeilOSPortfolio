@@ -147,15 +147,61 @@ document.querySelectorAll('[data-open]').forEach(button => {
 // -----------------------------------------------------------------------------
 
 windows.forEach(win => {
-  win.querySelector('[data-close]').addEventListener('click', () => {
-    closeWindow(win);
-  });
+  // Window controls respond to normal clicks AND iOS touch gestures.
+  // Handling touchend directly avoids waiting for Safari's synthetic click.
+  function registerWindowControl(selector, action) {
+    const control = win.querySelector(selector);
+    if (!control) return;
 
-  win.querySelector('[data-minimize]').addEventListener('click', () => {
-    minimizeWindow(win);
-  });
+    let touchStart = null;
 
-  win.addEventListener('pointerdown', () => {
+    // Don't run the window's focus/taskbar handler when tapping a control.
+    control.addEventListener('pointerdown', event => {
+      event.stopPropagation();
+    });
+
+    control.addEventListener('touchstart', event => {
+      if (event.touches.length !== 1) return;
+
+      const touch = event.touches[0];
+      touchStart = { x: touch.clientX, y: touch.clientY };
+    }, { passive: true });
+
+    control.addEventListener('touchend', event => {
+      if (!touchStart || event.changedTouches.length !== 1) return;
+
+      const touch = event.changedTouches[0];
+      const moved = Math.hypot(
+        touch.clientX - touchStart.x,
+        touch.clientY - touchStart.y
+      );
+      touchStart = null;
+
+      // Only activate on a tap, never on a swipe or scroll gesture.
+      if (moved > 12) return;
+
+      event.preventDefault(); // Avoid a second, delayed synthetic click.
+      event.stopPropagation();
+      action(win);
+    }, { passive: false });
+
+    control.addEventListener('touchcancel', () => {
+      touchStart = null;
+    }, { passive: true });
+
+    // Keyboard, mouse, and non-touch browser support.
+    control.addEventListener('click', event => {
+      event.stopPropagation();
+      action(win);
+    });
+  }
+
+  registerWindowControl('[data-close]', closeWindow);
+  registerWindowControl('[data-minimize]', minimizeWindow);
+
+  win.addEventListener('pointerdown', event => {
+    if (event.target.closest('.window-controls')) return;
+
     focusWindow(win);
     renderTasks();
   });
