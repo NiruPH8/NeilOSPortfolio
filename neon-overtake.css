@@ -1,0 +1,338 @@
+/* ===========================================================================
+   NEON OVERTAKE — CLICKABLE PORTFOLIO PROJECT CARD
+   The portfolio's existing theme colors and windows remain unchanged.
+   =========================================================================== */
+
+.neon-project-card {
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.neon-project-card:hover,
+.neon-project-card:focus-within {
+  transform: translateY(-4px);
+  border-color: #39d8e3;
+  box-shadow: 0 12px 35px rgba(41, 219, 222, .14);
+}
+
+.neon-project-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.neon-project-card-link:focus-visible {
+  outline: 3px solid #43ebec;
+  outline-offset: -3px;
+}
+
+.neon-project-art {
+  overflow: hidden;
+  background: #071321 !important;
+}
+
+.neon-project-art > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  opacity: .92;
+  transition: transform 220ms ease;
+}
+
+.neon-project-card:hover .neon-project-art > img {
+  transform: scale(1.07);
+}
+
+.neon-project-art small {
+  z-index: 1;
+  padding: 4px 7px;
+  color: #ebffff !important;
+  border: 1px solid rgba(65, 233, 233, .5);
+  border-radius: 4px;
+  background: rgba(3, 18, 31, .91);
+}
+
+.neon-project-card .project-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.neon-project-card .project-footer {
+  margin-top: auto;
+}
+
+.neon-project-action {
+  display: inline-flex;
+  padding: 5px 7px;
+  border: 1px solid #35cacb;
+  border-radius: 5px;
+  color: #6beced;
+  white-space: nowrap;
+}
+
+html[data-theme="light"] .neon-project-card:hover,
+html[data-theme="light"] .neon-project-card:focus-within {
+  border-color: #56bac7;
+  box-shadow: 0 13px 30px rgba(73, 175, 190, .2);
+}
+
+html[data-theme="light"] .neon-project-action {
+  background: #d5f9f7;
+  border-color: #7cd4da;
+  color: #175f6c;
+}
+
+/* ===========================================================================
+   NEON OVERTAKE — DEDICATED GAME DETAILS PAGE
+   This page is intentionally distinct from the desktop OS portfolio UI.
+   =========================================================================== */
+
+body.neon-page {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #07111f;
+  color: #eaf3ff;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+.neon-page *,
+.neon-page *::before,
+.neon-page *::after { box-sizing: border-box; }
+
+.neon-page a { color: inherit; }
+
+.neon-page a:focus-visible,
+.neon-page button:focus-visible {
+  outline: 2px solid #34e8e6;
+  outline-offset: 4px;
+}
+
+.neon-page .neon-container {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.neon-page .neon-topbar {
+  background: rgba(6, 16, 29, .92);
+  border-bottom: 1px solid rgba(149, 186, 220, .17);
+}
+
+.neon-page .neon-topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-block: 19px;
+}
+
+.neon-page .neon-site-brand {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -.055em;
+  text-decoration: none;
+}
+
+.neon-page .neon-site-brand span { color: #36e3e1; }
+
+.neon-page .neon-return {
+  font-size: 13px;
+  color: #c1cee0;
+  text-decoration: none;
+}
+.neon-page .neon-return:hover { color: #4be9e5; }
+
+.neon-page .neon-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 80px);
+  padding-block: clamp(42px, 8vw, 90px) 67px;
+}
+
+.neon-page .neon-kicker {
+  display: inline-block;
+  margin: 0 0 19px;
+  color: #39e6e1;
+  font: 700 12px ui-monospace, Consolas, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.neon-page .neon-title {
+  margin: 0;
+  font-size: clamp(51px, 6.3vw, 90px);
+  font-weight: 900;
+  letter-spacing: -.068em;
+  line-height: .99;
+  text-transform: uppercase;
+}
+
+.neon-page .neon-title span { display: block; color: #37e2df; }
+
+.neon-page .neon-description {
+  max-width: 570px;
+  margin: 27px 0 21px;
+  color: #b3c6d9;
+  font-size: clamp(15px, 1.7vw, 17px);
+}
+
+.neon-page .neon-tags,
+.neon-page .neon-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.neon-page .neon-tags span {
+  padding: 5px 11px;
+  border: 1px solid #31495d;
+  border-radius: 999px;
+  color: #b9cddd;
+  font-size: 11px;
+  letter-spacing: .05em;
+}
+
+.neon-page .neon-actions { margin-top: 27px; }
+
+.neon-page .neon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 49px;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid #2cd7d5;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+
+.neon-page .neon-btn:hover { transform: translateY(-2px); }
+.neon-page .neon-btn-primary { background: #27ddda; color: #071522; }
+.neon-page .neon-btn-primary:hover { background: #88fcf2; }
+.neon-page .neon-btn-outline { color: #d6e9f5; }
+.neon-page .neon-btn-outline:hover { background: #163048; }
+
+.neon-page .neon-hero-frame {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #29445b;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #11283d, #0b1c31 58%, #231c3c);
+  box-shadow: 0 20px 68px rgba(0, 0, 0, .32);
+}
+
+.neon-page .neon-hero-frame img {
+  display: block;
+  width: 100%;
+  max-height: 470px;
+  object-fit: contain;
+  border-radius: 9px;
+}
+
+.neon-page .neon-hero-frame figcaption {
+  margin-top: 10px;
+  color: #91a6bf;
+  font: 11px ui-monospace, Consolas, monospace;
+  text-align: center;
+}
+
+.neon-page .neon-divider {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #273e55;
+}
+
+.neon-page .neon-section { padding-block: 54px; }
+.neon-page .neon-section-title { margin: 0 0 12px; font-size: clamp(26px, 3vw, 36px); letter-spacing: -.04em; }
+.neon-page .neon-section-desc { max-width: 670px; margin: 0 0 28px; color: #b0c2d5; font-size: 14px; }
+
+.neon-page .neon-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.neon-page .neon-gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid #314a5f;
+  border-radius: 14px;
+  background: #102239;
+  color: #f1f7fe;
+  text-align: left;
+  cursor: zoom-in;
+  transition: border-color .2s, transform .2s;
+}
+
+.neon-page .neon-gallery-item:hover { border-color: #4ae9e5; transform: translateY(-3px); }
+.neon-page .neon-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center top;
+  background: #08182a;
+}
+.neon-page .neon-gallery-item span { display: block; padding: 12px 15px; font-size: 13px; font-weight: 700; }
+
+.neon-page .neon-details { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.neon-page .neon-detail-card { padding: 27px; border: 1px solid #2d4359; border-radius: 15px; background: #0d2034; }
+.neon-page .neon-detail-card h3 { margin: 0 0 14px; font-size: 18px; }
+.neon-page .neon-detail-card ul { padding-left: 21px; margin: 0; }
+.neon-page .neon-detail-card li { margin: 9px 0; color: #b9cbdb; font-size: 14px; }
+.neon-page .neon-detail-card kbd { padding: 3px 7px; border: 1px solid #40617a; border-radius: 4px; background: #15364c; color: #eaffff; font: 700 12px ui-monospace, monospace; }
+
+.neon-page .neon-note { margin-top: 24px; padding: 16px 19px; border-left: 3px solid #ffb36b; background: #14283b; color: #c0d1e1; font-size: 13px; }
+.neon-page .neon-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 23px 38px; color: #8ea6bb; font-size: 12px; }
+
+.neon-page .neon-lightbox {
+  width: min(510px, calc(100vw - 26px));
+  max-height: 94dvh;
+  padding: 13px;
+  overflow: auto;
+  border: 1px solid #427388;
+  border-radius: 16px;
+  background: #0b1a2d;
+  color: #e9faff;
+}
+
+.neon-page .neon-lightbox::backdrop { background: rgba(2, 7, 16, .9); }
+.neon-page .neon-lightbox img { display: block; width: auto; max-width: 100%; max-height: calc(94dvh - 110px); margin: auto; object-fit: contain; }
+.neon-page .neon-lightbox-head,
+.neon-page .neon-lightbox-actions { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.neon-page .neon-lightbox-head { margin-bottom: 11px; }
+.neon-page .neon-lightbox-actions { margin-top: 12px; }
+.neon-page .neon-lightbox button { padding: 7px 12px; background: #18394f; color: #fff; border: 1px solid #416b82; border-radius: 7px; cursor: pointer; }
+
+@media (max-width: 760px) {
+  .neon-page .neon-container { width: min(100% - 30px, 520px); }
+  .neon-page .neon-hero { grid-template-columns: 1fr; padding-block: 44px; }
+  .neon-page .neon-hero-frame { width: 100%; max-width: 430px; justify-self: center; }
+  .neon-page .neon-gallery { grid-template-columns: 1fr; }
+  .neon-page .neon-gallery-item { max-width: 420px; }
+  .neon-page .neon-details { grid-template-columns: 1fr; }
+  .neon-page .neon-section { padding-block: 40px; }
+  .neon-page .neon-detail-card { padding: 21px; }
+  .neon-page .neon-footer { flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neon-page *,
+  .neon-project-card * { transition: none !important; }
+}
