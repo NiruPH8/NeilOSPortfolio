@@ -3699,3 +3699,58 @@ html[data-theme="light"] .video-sample-external:hover {
     white-space: nowrap;
   }
 }
+
+
+/* ==========================================================================
+   HOME PORTRAIT — reference-inspired circle above the introduction
+   Reuses assets/profile.jpg; the About Me portrait is left unchanged.
+   ========================================================================== */
+
+.hero-symbol.hero-portrait {
+  display: block;
+  position: relative;
+  width: clamp(100px, 10vw, 132px);
+  height: clamp(100px, 10vw, 132px);
+  margin: 20px auto 20px;
+  padding: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #f7fafb;
+  border: 2px solid rgba(250, 250, 255, .9);
+  box-shadow: 0 0 0 5px rgba(128, 222, 225, .16), 0 16px 34px rgba(0, 0, 0, .2);
+  transform: none;
+  animation: none;
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 24%;
+  background: #f7fafb;
+}
+
+html[data-theme="light"] .hero-symbol.hero-portrait {
+  background: #f7fafb;
+  border-color: #fff;
+  box-shadow: 0 0 0 5px rgba(180, 127, 157, .12), 0 14px 32px rgba(44, 77, 90, .16);
+}
+
+@media (max-width: 700px) {
+  .hero-symbol.hero-portrait {
+    width: 104px;
+    height: 104px;
+    margin: 16px auto 17px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-symbol.hero-portrait {
+    width: 92px;
+    height: 92px;
+    margin: 12px auto 15px;
+  }
+}
