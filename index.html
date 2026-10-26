@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html data-theme="light" lang="en">
   <head>
     <meta charset="utf-8"/>
@@ -7,9 +8,11 @@
     <meta content="Explore Neil Bryan C. Paguigan’s desktop-style portfolio: IT graduate, computer technician, and developing programmer based in Bulacan, Philippines." name="description"/>
     <title>Neil Bryan C. Paguigan | Portfolio</title>
     <link href="style.css" rel="stylesheet"/>
+    <link href="neon-overtake.css" rel="stylesheet"/>
     <script defer="" src="script.js"></script>
     <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
   </head>
+
   <body>
     <!-- SVG ICON DEFINITIONS — navigation icon shapes -->
     <svg aria-hidden="true" class="icon-sprite" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +56,10 @@
         </div>
         <div class="topbar-right">
           <span class="topbar-tip">INTERACTIVE PORTFOLIO / 2026</span>
-          <button aria-label="Switch to dark mode" aria-pressed="false" class="theme-toggle" id="themeToggle" title="Switch theme" type="button"><span aria-hidden="true" class="theme-toggle-icon" id="themeGlyph">☾</span><span class="theme-toggle-label" id="themeLabel">Dark mode</span></button>
+          <button aria-label="Switch to dark mode" aria-pressed="false" class="theme-toggle" id="themeToggle" title="Switch theme" type="button">
+            <span aria-hidden="true" class="theme-toggle-icon" id="themeGlyph">☾</span>
+            <span class="theme-toggle-label" id="themeLabel">Dark mode</span>
+          </button>
           <span class="topbar-divider"></span>
           <span id="topClock">--:--</span>
         </div>
@@ -61,26 +67,62 @@
       <main class="workspace">
         <!-- DESKTOP SHORTCUTS — data-open targets a window ID -->
         <div aria-label="Desktop shortcuts" class="desktop-icons">
-          <button class="shortcut" data-open="about"><span class="shortcut-icon icon-about"><svg aria-hidden="true" class="ui-icon"><use href="#icon-about"></use></svg></span><span>About Me</span></button>
-          <button class="shortcut" data-open="projects"><span class="shortcut-icon icon-projects"><svg aria-hidden="true" class="ui-icon"><use href="#icon-projects"></use></svg></span><span>Projects</span></button>
-          <button class="shortcut" data-open="skills"><span class="shortcut-icon icon-skills"><svg aria-hidden="true" class="ui-icon"><use href="#icon-skills"></use></svg></span><span>Skills</span></button>
-          <button class="shortcut" data-open="experience"><span class="shortcut-icon icon-experience"><svg aria-hidden="true" class="ui-icon"><use href="#icon-experience"></use></svg></span><span>Experience</span></button>
-          <button class="shortcut" data-open="contact"><span class="shortcut-icon icon-contact"><svg aria-hidden="true" class="ui-icon"><use href="#icon-contact"></use></svg></span><span>Contact</span></button>
-          <button class="shortcut" data-open="education"><span class="shortcut-icon icon-education"><svg aria-hidden="true" class="ui-icon"><use href="#icon-education"></use></svg></span><span>Education</span></button>
+          <button class="shortcut" data-open="about">
+            <span class="shortcut-icon icon-about">
+              <svg aria-hidden="true" class="ui-icon"><use href="#icon-about"></use></svg>
+            </span>
+            <span>About Me</span>
+          </button>
+          <button class="shortcut" data-open="projects">
+            <span class="shortcut-icon icon-projects">
+              <svg aria-hidden="true" class="ui-icon"><use href="#icon-projects"></use></svg>
+            </span>
+            <span>Projects</span>
+          </button>
+          <button class="shortcut" data-open="skills">
+            <span class="shortcut-icon icon-skills">
+              <svg aria-hidden="true" class="ui-icon"><use href="#icon-skills"></use></svg>
+            </span>
+            <span>Skills</span>
+          </button>
+          <button class="shortcut" data-open="experience">
+            <span class="shortcut-icon icon-experience">
+              <svg aria-hidden="true" class="ui-icon"><use href="#icon-experience"></use></svg>
+            </span>
+            <span>Experience</span>
+          </button>
+          <button class="shortcut" data-open="contact">
+            <span class="shortcut-icon icon-contact">
+              <svg aria-hidden="true" class="ui-icon"><use href="#icon-contact"></use></svg>
+            </span>
+            <span>Contact</span>
+          </button>
+          <button class="shortcut" data-open="education">
+            <span class="shortcut-icon icon-education">
+              <svg aria-hidden="true" class="ui-icon"><use href="#icon-education"></use></svg>
+            </span>
+            <span>Education</span>
+          </button>
         </div>
+
         <!-- HERO / HOME PAGE — edit your name, headline and introduction here -->
         <section aria-label="Welcome" class="hero">
           <div class="hello-pill"><span class="status-dot"></span> OPEN TO OPPORTUNITIES</div>
-          <div aria-hidden="true" class="hero-symbol"><span aria-hidden="true" class="hero-emblem">NB<span>.</span></span></div>
+          <div aria-hidden="true" class="hero-symbol">
+            <span aria-hidden="true" class="hero-emblem">NB<span>.</span></span>
+          </div>
           <p class="hero-kicker">INFORMATION TECHNOLOGY / DEVELOPMENT &amp; SUPPORT</p>
           <p class="hero-intro">Hi, I'm</p>
-          <h1 class="hero-name">Neil Bryan C. Paguigan<span class="hero-period"></span></h1>
+          <h1 class="hero-name">Neil Bryan C. Paguigan<span class="hero-period">.</span></h1>
           <p class="hero-description">IT Graduate <span class="role-divider">/</span> Computer Technician <span class="role-divider">/</span> Aspiring Developer</p>
-          <p class="hero-subtitle">I combine hands-on computer hardware and troubleshooting experience with a growing foundation in programming and web development.</p>
+          <p class="hero-subtitle">
+            I combine hands-on computer hardware and troubleshooting experience with a growing foundation
+            in programming and web development.
+          </p>
           <button class="hero-action" data-open="experience">Explore my experience <span aria-hidden="true">↗</span></button>
         </section>
         <div class="window-layer" id="windowLayer">
-          <!-- ABOUT ME  -->
+          <!-- ABOUT ME — edit your introduction and personal details below -->
           <section aria-label="About Me" aria-modal="false" class="app-window" data-icon="A" data-title="About Me" hidden="" id="window-about" role="dialog">
             <div class="window-titlebar">
               <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-about"></use></svg>about / profile</div>
@@ -91,14 +133,24 @@
             </div>
             <div class="window-body about-layout">
               <div class="avatar-card">
-                <div class="avatar-art avatar-photo-wrap"><img alt="Portrait of Neil Bryan C. Paguigan" height="400" loading="lazy" src="assets/profile.jpg" width="400"/></div>
+                <div class="avatar-art avatar-photo-wrap">
+                  <img alt="Portrait of Neil Bryan C. Paguigan" height="400" loading="lazy" src="assets/profile.jpg" width="400"/>
+                </div>
                 <div class="avatar-caption">NEIL BRYAN C. PAGUIGAN</div>
               </div>
               <div class="about-copy">
                 <p class="eyebrow">01 / ABOUT ME</p>
                 <h2>Hi, I'm <span class="highlight">Neil Bryan.</span></h2>
-                <p>I'm a Bachelor of Science in Information Technology graduate from STI College San Jose Del Monte, with practical experience in computer diagnostics, PC assembly, operating system installation, and software troubleshooting.</p>
-                <p>My background also includes an on-the-job training role as a video editor at Hooli Software. I'm continuing to build my programming skills and looking for opportunities to apply both my technical experience and creativity.</p>
+                <p>
+                  I'm a Bachelor of Science in Information Technology graduate from STI College San Jose
+                  Del Monte, with practical experience in computer diagnostics, PC assembly, operating
+                  system installation, and software troubleshooting.
+                </p>
+                <p>
+                  My background also includes an on-the-job training role as a video editor at Hooli
+                  Software. I'm continuing to build my programming skills and looking for opportunities
+                  to apply both my technical experience and creativity.
+                </p>
                 <div class="tags">
                   <span>BS Information Technology</span>
                   <span>PC Support</span>
@@ -108,7 +160,8 @@
               </div>
             </div>
           </section>
-          <!-- PROJECTS -->
+
+          <!-- PROJECTS — update project cards, descriptions and links below -->
           <section aria-label="Projects" aria-modal="false" class="app-window" data-icon="P" data-title="Projects" hidden="" id="window-projects" role="dialog">
             <div class="window-titlebar">
               <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-projects"></use></svg>projects / selected work</div>
@@ -121,12 +174,15 @@
               <p class="eyebrow">02 / SELECTED WORK</p>
               <div class="section-heading">
                 <h2>Work &amp; <span class="highlight">projects.</span></h2>
-                <span class="tiny-caption">RESUME-BASED</span>
+                <span class="tiny-caption">SELECTED WORK</span>
               </div>
               <div class="project-grid">
-                <!-- PROJECT CARD -->
+                <!-- PROJECT CARD — replace the title, description, and tech stack below -->
                 <article class="project-card">
-                  <div class="project-art art-one"><span aria-hidden="true">⌘</span><small>WEB PORTFOLIO</small></div>
+                  <div class="project-art art-one">
+                    <span aria-hidden="true" class="project-logo">NB<span class="project-logo-dot">.</span></span>
+                    <small>WEB PORTFOLIO</small>
+                  </div>
                   <div class="project-content">
                     <div class="project-index">01 — PERSONAL WEBSITE</div>
                     <h3>Portfolio OS</h3>
@@ -137,9 +193,13 @@
                     </div>
                   </div>
                 </article>
-                <!-- PROJECT CARD -->
+
+                <!-- PROJECT CARD — replace the title, description, and tech stack below -->
                 <article class="project-card">
-                  <div class="project-art art-two"><span aria-hidden="true">▶</span><small>HOOLI SOFTWARE</small></div>
+                  <div class="project-art art-two">
+                    <span aria-hidden="true">▶</span>
+                    <small>HOOLI SOFTWARE</small>
+                  </div>
                   <div class="project-content">
                     <div class="project-index">02 — OJT / VIDEO</div>
                     <h3>Video Editing</h3>
@@ -150,24 +210,33 @@
                     </div>
                   </div>
                 </article>
-                <!-- PROJECT CARD -->
-                <article class="project-card">
-                  <div class="project-art art-three"><span aria-hidden="true">◌</span><small>HOOLI SOFTWARE</small></div>
-                  <div class="project-content">
-                    <div class="project-index">03 — OJT / WEB ASSETS</div>
-                    <h3>Website Preloaders</h3>
-                    <p>Worked on preloader assets for websites as part of my video-editing internship.</p>
-                    <div class="project-footer">
-                      <span>DIGITAL ASSETS</span>
-                      <span class="project-current">OJT WORK</span>
+
+                <!-- PROJECT CARD — replace the title, description, and tech stack below -->
+                <article class="project-card neon-project-card">
+                  <a aria-label="View Neon Overtake game details, screenshots, and download (opens in a new tab)" class="neon-project-card-link" href="neon-overtake.html" rel="noopener noreferrer" target="_blank">
+                    <div class="project-art neon-project-art">
+                      <img alt="Neon Overtake game logo" loading="lazy" src="assets/neon-overtake/logo.png"/>
+                      <small>PYTHON / WINDOWS GAME</small>
                     </div>
-                  </div>
+                    <div class="project-content">
+                      <div class="project-index">03 — INDEPENDENT GAME PROJECT</div>
+                      <h3>Neon Overtake</h3>
+                      <p>A neon-styled 2D arcade driving game. Dodge traffic, overtake cars, and chase a new personal best as the speed increases.</p>
+                      <div class="project-footer">
+                        <span>PYTHON · WINDOWS · ARCADE</span>
+                        <span class="neon-project-action">VIEW GAME ↗</span>
+                      </div>
+                    </div>
+                  </a>
                 </article>
+
+                <!-- PROJECT 04 — NEON OVERTAKE: Click to open the game details in a new tab -->
               </div>
-              <p class="editor-note">Portfolio samples and external case-study links can be added when they are available. No placeholder projects or fake links.</p>
+              <p class="editor-note">Select Neon Overtake to view gameplay screenshots, details, and its Windows installer.</p>
             </div>
           </section>
-          <!-- SKILLS -->
+
+          <!-- SKILLS — edit your technical and workplace skills below -->
           <section aria-label="Skills" aria-modal="false" class="app-window" data-icon="S" data-title="Skills" hidden="" id="window-skills" role="dialog">
             <div class="window-titlebar">
               <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-skills"></use></svg>skills / capabilities</div>
@@ -180,7 +249,8 @@
               <p class="eyebrow">03 / TECHNICAL SKILLS</p>
               <h2>What I <span class="highlight">work with.</span></h2>
               <p class="section-lead">A foundation in programming and practical experience with computers, software, and creative tools.</p>
-              <!-- SKILL CATEGORY -->
+
+              <!-- SKILL CATEGORY — add or remove <span> items inside .skill-pills -->
               <div class="skill-group">
                 <h3><span>01</span> Programming fundamentals</h3>
                 <div class="skill-pills">
@@ -191,7 +261,8 @@
                   <span>Python (basic)</span>
                 </div>
               </div>
-              <!-- SKILL CATEGORY -->
+
+              <!-- SKILL CATEGORY — add or remove <span> items inside .skill-pills -->
               <div class="skill-group">
                 <h3><span>02</span> Computer hardware &amp; support</h3>
                 <div class="skill-pills">
@@ -203,7 +274,8 @@
                   <span>Computer Literacy</span>
                 </div>
               </div>
-              <!-- SKILL CATEGORY -->
+
+              <!-- SKILL CATEGORY — add or remove <span> items inside .skill-pills -->
               <div class="skill-group">
                 <h3><span>03</span> Creative &amp; workplace skills</h3>
                 <div class="skill-pills">
@@ -218,7 +290,8 @@
               <p class="editor-note">Programming languages are listed as foundational skills, consistent with my résumé.</p>
             </div>
           </section>
-          <!-- EXPERIENCE -->
+
+          <!-- EXPERIENCE — edit your job descriptions and dates below -->
           <section aria-label="Experience" aria-modal="false" class="app-window" data-icon="E" data-title="Experience" hidden="" id="window-experience" role="dialog">
             <div class="window-titlebar">
               <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-experience"></use></svg>experience / timeline</div>
@@ -230,7 +303,8 @@
             <div class="window-body">
               <p class="eyebrow">04 / PROFESSIONAL EXPERIENCE</p>
               <h2>Where I've <span class="highlight">worked.</span></h2>
-              <!-- EXPERIENCE TIMELINE -->
+
+              <!-- EXPERIENCE TIMELINE — edit roles, dates, and responsibilities -->
               <div class="timeline">
                 <div class="timeline-item">
                   <div class="timeline-dot"></div>
@@ -250,14 +324,15 @@
                   <p class="timeline-place">Hooli Software · Internship</p>
                   <ul class="experience-list">
                     <li>Edited Reels and other short-form video content.</li>
-                    <li>Created and edited lyric videos.</li>
+                    <li>Created or edited lyric videos.</li>
                     <li>Worked on preloaders for websites.</li>
                   </ul>
                 </div>
               </div>
             </div>
           </section>
-          <!-- CONTACT -->
+
+          <!-- CONTACT — edit your email, phone number and location below -->
           <section aria-label="Contact" aria-modal="false" class="app-window" data-icon="C" data-title="Contact" hidden="" id="window-contact" role="dialog">
             <div class="window-titlebar">
               <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-contact"></use></svg>contact / connect</div>
@@ -267,11 +342,14 @@
               </div>
             </div>
             <div class="window-body contact-body">
-              <div class="contact-art"><svg aria-hidden="true" class="contact-icon"><use href="#icon-contact"></use></svg></div>
+              <div class="contact-art">
+                <svg aria-hidden="true" class="contact-icon"><use href="#icon-contact"></use></svg>
+              </div>
               <p class="eyebrow">05 / GET IN TOUCH</p>
               <h2>Let's <span class="highlight">connect.</span></h2>
               <p>I'm based in San Jose del Monte, Bulacan, Philippines, and open to opportunities in software development and IT support.</p>
               <a class="contact-primary" href="mailto:neilbryancpaguigan@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+
               <!-- CONTACT DETAILS — these appear publicly when you publish the site -->
               <div class="contact-details">
                 <a href="mailto:neilbryancpaguigan@gmail.com">neilbryancpaguigan@gmail.com</a>
@@ -280,7 +358,8 @@
               </div>
             </div>
           </section>
-          <!-- EDUCATION -->
+
+          <!-- EDUCATION — edit your qualifications and schools below -->
           <section aria-label="Education" aria-modal="false" class="app-window" data-icon="ED" data-title="Education" hidden="" id="window-education" role="dialog">
             <div class="window-titlebar">
               <div class="window-heading"><svg aria-hidden="true" class="heading-icon"><use href="#icon-education"></use></svg> education / qualifications</div>
@@ -318,30 +397,56 @@
           </section>
         </div>
       </main>
-      <!-- TASKBAR -->
+
+      <!-- TASKBAR — Start button, open windows and date/time -->
       <footer class="taskbar">
-        <button aria-expanded="false" aria-label="Open shortcut menu" class="start-button" id="startButton"><span aria-hidden="true" class="start-mark">NB<span>.</span></span><span>Start</span></button>
+        <button aria-expanded="false" aria-label="Open shortcut menu" class="start-button" id="startButton">
+          <span aria-hidden="true" class="start-mark">NB<span>.</span></span>
+          <span>Start</span>
+        </button>
         <div class="task-separator"></div>
         <div aria-label="Open apps" class="task-items" id="taskItems"></div>
         <div class="taskbar-right">
           <span class="taskbar-message">OPEN TO OPPORTUNITIES</span>
           <span class="task-separator"></span>
-          <div class="tray-clock"><span id="taskClock">--:--</span><span id="taskDate">---</span></div>
+          <div class="tray-clock">
+            <span id="taskClock">--:--</span>
+            <span id="taskDate">---</span>
+          </div>
         </div>
       </footer>
-      <!-- START MENU -->
+
+      <!-- START MENU — navigation shortcuts -->
       <div class="start-menu" hidden="" id="startMenu">
         <div class="start-heading">
           <span aria-hidden="true" class="start-heading-mark">NB<span>.</span></span>
           <span>Navigation</span>
         </div>
         <div class="start-grid">
-          <button data-open="about"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-about"></use></svg><span>About Me</span></button>
-          <button data-open="projects"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-projects"></use></svg><span>Projects</span></button>
-          <button data-open="skills"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-skills"></use></svg><span>Skills</span></button>
-          <button data-open="experience"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-experience"></use></svg><span>Experience</span></button>
-          <button data-open="contact"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-contact"></use></svg><span>Contact</span></button>
-          <button data-open="education"><svg aria-hidden="true" class="start-menu-icon"><use href="#icon-education"></use></svg><span>Education</span></button>
+          <button data-open="about">
+            <svg aria-hidden="true" class="start-menu-icon"><use href="#icon-about"></use></svg>
+            <span>About Me</span>
+          </button>
+          <button data-open="projects">
+            <svg aria-hidden="true" class="start-menu-icon"><use href="#icon-projects"></use></svg>
+            <span>Projects</span>
+          </button>
+          <button data-open="skills">
+            <svg aria-hidden="true" class="start-menu-icon"><use href="#icon-skills"></use></svg>
+            <span>Skills</span>
+          </button>
+          <button data-open="experience">
+            <svg aria-hidden="true" class="start-menu-icon"><use href="#icon-experience"></use></svg>
+            <span>Experience</span>
+          </button>
+          <button data-open="contact">
+            <svg aria-hidden="true" class="start-menu-icon"><use href="#icon-contact"></use></svg>
+            <span>Contact</span>
+          </button>
+          <button data-open="education">
+            <svg aria-hidden="true" class="start-menu-icon"><use href="#icon-education"></use></svg>
+            <span>Education</span>
+          </button>
         </div>
         <div class="start-footer">PORTFOLIO OS <span>VERSION 2.0</span></div>
       </div>
